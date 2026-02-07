@@ -78,7 +78,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-plugins=(git kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,11 +92,11 @@ source $ZSH/oh-my-zsh.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch $(uname -m)"
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -110,23 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-# NVM
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-#[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-export PATH=$PATH:/Users/victor/.spicetify
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH=$HOME/Library/Python/3.13/bin:$PATH
-export PATH=$PATH:/Users/victor/.npm-global/bin
-#export TERM=xterm-256color
-
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/victor/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
-source <(kubectl completion zsh)

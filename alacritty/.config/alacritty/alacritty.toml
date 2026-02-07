@@ -1,49 +1,24 @@
-# ~/.alacritty.toml
 [general]
-import = [
-  "~/.config/alacritty/themes/themes/catppuccin_macchiato.toml"
-]
+import = [ "~/.config/alacritty/themes/themes/catppuccin_macchiato.toml" ]
 
 [window]
-dimensions = { columns = 120, lines = 35 }
-padding = { x = 10, y = 30 }
-decorations = "Transparent"
-dynamic_title = true
-opacity = 0.8 # transparencia
-blur = true    # si tu compositor (como picom) lo permite
-
-[env]
-TERM = "xterm-256color"
+dimensions = { columns = 150, lines = 40 }
+padding = { x = 10, y = 10 }
+opacity = 0.8
+startup_mode = "Maximized"
+blur = true
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
-bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
-italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
-bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
-size = 19
-offset = { x = 0, y = 2 }
-builtin_box_drawing = true
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+size = 13
 
 [cursor]
-style = { shape = "Beam", blinking = "On" }
-vi_mode_style = "Block"
-blink_interval = 500
+style = { shape = "Beam", blinking = "Always" }
 blink_timeout = 0
-unfocused_hollow = true
-thickness = 0.2
 
-[scrolling]
-history = 10000
-multiplier = 3
+[mouse]
+hide_when_typing = true
 
-[terminal.shell]
-program = "/bin/zsh"
-args = ["--login"]
-
-[keyboard]
-bindings = [
-  { key = "V", mods = "Control|Shift", action = "Paste" },
-  { key = "C", mods = "Control|Shift", action = "Copy" },
-  { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" },
-  { key = "Q", mods = "Control|Shift", action = "Quit" }
-]
