@@ -1,28 +1,27 @@
 # ~/.alacritty.toml
-
-general.import = [
-  "~/.config/alacritty/catppuccin-macchiato.toml"
+[general]
+import = [
+  "~/.config/alacritty/themes/themes/catppuccin_macchiato.toml"
 ]
+
+[window]
+dimensions = { columns = 120, lines = 35 }
+padding = { x = 10, y = 30 }
+decorations = "Transparent"
+dynamic_title = true
+opacity = 0.8 # transparencia
+blur = true    # si tu compositor (como picom) lo permite
 
 [env]
 TERM = "xterm-256color"
-
-[window]
-dimensions = { columns = 100, lines = 30 }
-padding = { x = 10, y = 10 }
-decorations = "Full"
-startup_mode = "Maximized"
-dynamic_title = true
-opacity = 0.93 # transparencia
-blur = true    # si tu compositor (como picom) lo permite
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
 bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
 italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
 bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
-size = 13.5
-#offset = { x = 0, y = 2 }
+size = 19
+offset = { x = 0, y = 2 }
 builtin_box_drawing = true
 
 [cursor]
@@ -37,6 +36,10 @@ thickness = 0.2
 history = 10000
 multiplier = 3
 
+[terminal.shell]
+program = "/bin/zsh"
+args = ["--login"]
+
 [keyboard]
 bindings = [
   { key = "V", mods = "Control|Shift", action = "Paste" },
@@ -44,36 +47,3 @@ bindings = [
   { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" },
   { key = "Q", mods = "Control|Shift", action = "Quit" }
 ]
-
-#[colors.primary]
-#background = "#1e1e2e"
-#foreground = "#cdd6f4"
-#
-#[colors.cursor]
-#text = "#1e1e2e"
-#cursor = "#f5e0dc"
-#
-#[colors.selection]
-#text = "#1e1e2e"
-#background = "#f5e0dc"
-#
-#[colors.normal]
-#black   = "#45475a"
-#red     = "#f38ba8"
-#green   = "#a6e3a1"
-#yellow  = "#f9e2af"
-#blue    = "#89b4fa"
-#magenta = "#f5c2e7"
-#cyan    = "#94e2d5"
-#white   = "#bac2de"
-#
-#[colors.bright]
-#black   = "#585b70"
-#red     = "#f38ba8"
-#green   = "#a6e3a1"
-#yellow  = "#f9e2af"
-#blue    = "#89b4fa"
-#magenta = "#f5c2e7"
-#cyan    = "#94e2d5"
-#white   = "#a6adc8"
-
