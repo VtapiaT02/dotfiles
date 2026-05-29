@@ -122,6 +122,7 @@ export PATH=$PATH:/Users/victor/.spicetify
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH=$HOME/Library/Python/3.13/bin:$PATH
 export PATH=$PATH:/Users/victor/.npm-global/bin
+export PATH=/opt/homebrew/share/google-cloud-sdk/bin:"$PATH"
 #export TERM=xterm-256color
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
